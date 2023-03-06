@@ -91,7 +91,7 @@ const ToDoItem = (props: Props) => {
         isBeingEdited: false,
       };
       dispatch(updateItemAsync(updated));
-      // setIsEditing(false);
+      
     }
 
     if (isEditing && event.key === "Escape") {
@@ -101,8 +101,7 @@ const ToDoItem = (props: Props) => {
         isBeingEdited: false,
       };
       dispatch(updateItemAsync(updated));
-      // setInputValue(inputSnapshot);
-      // setIsEditing(false);
+      
     }
   };
 

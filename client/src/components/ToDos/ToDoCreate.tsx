@@ -35,7 +35,7 @@ const ToDoCreate = (props: Props) => {
     };
 
     const handleSubmit = (event: React.MouseEvent<HTMLButtonElement>): void => {
-        // TODO: Set up hook into a global error state manager so errors can be shown elsewhere?
+    
         if (inputValue !== "") {
             const newItem: Item = {
                 isComplete: false,

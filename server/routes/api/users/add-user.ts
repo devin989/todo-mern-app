@@ -10,13 +10,11 @@ const addUser = (req: Request, res: Response): void => {
     const { errors, isValid } = validateRegistration(req.body);
 
     if (!isValid) {
-        // this should never happen, but just to be on the safe side we can return an error 500
         if (Object.keys(errors).length === 0) {
             res.status(500).json(Notifications.UserAddFailed);
             return;
         }
 
-        // we have to have an error at this point as it's a requirement for isValid to be false
         const firstError = Object.values(errors)[0];
         let response = Notifications.UserAddFailed;
         response.message = firstError!;
@@ -25,7 +23,6 @@ const addUser = (req: Request, res: Response): void => {
         return;
     }
 
-    // check whether email is already in use before registering
     const email = req.body.email;
     const query = { email: email };
     UserCollection.findOne(query, (err, user) => {

@@ -8,7 +8,7 @@ import {
 } from "../../app/notification-slice";
 import { NotificationTypes } from "../../types/notification.types";
 
-import "./Toasts.scss"; //not a module because we need to override bootstrap styling
+import "./Toasts.scss"; 
 
 type Props = {};
 

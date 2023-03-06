@@ -30,7 +30,7 @@ const Login = (props: Props) => {
         event.preventDefault();
 
         const loginPayload = { email, password };
-        appDispatch(loginUserAsync(loginPayload)).then((bool: any) => {
+        appDispatch(loginUserAsync(loginPayload)).then((bool: boolean) => {
             if (bool) {
                 redirectToHome();
             }

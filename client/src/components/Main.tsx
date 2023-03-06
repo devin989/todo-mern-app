@@ -27,7 +27,6 @@ const Main = (props: Props) => {
         dirtyItems.length > 0 && isAuthenticated && token !== null;
 
     useEffect(() => {
-        // useEffect doesn't like async functions, so we wrap it and call the wrapper
         const asyncWrapper = async () => {
             await handleGetAllUserTodos();
         };

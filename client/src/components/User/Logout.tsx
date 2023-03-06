@@ -10,8 +10,6 @@ import styles from "./Logout.module.scss";
 interface Props extends RouteComponentProps {}
 
 const Logout = (props: Props) => {
-    // TODO: Remove token from local storage if going down that route
-
     const dispatch = useDispatch();
 
     const redirectToLogin = () => {
@@ -30,8 +28,14 @@ const Logout = (props: Props) => {
 
     return (
         <div className={styles.grid}>
-            <h1>This is the logout page</h1>
-            <button onClick={handleOnClick}>Logout</button>
+            <h1 className="text-center mt-3 mb-sm-5">
+                This is the logout page
+            </h1>
+            <div className="col-md-12 text-center">
+                <button className="btn btn-primary" onClick={handleOnClick}>
+                    Logout
+                </button>
+            </div>
         </div>
     );
 };

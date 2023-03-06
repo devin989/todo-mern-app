@@ -1,7 +1,7 @@
 import { Item } from "../types/to-do.types";
 
 export const getItemsFromDatabase = async (token: string) => {
-    const getRequest = await fetch(`/api/user/todos`, {
+    const getRequest = await fetch(`http://localhost:8080/api/user/todos`, {
         method: "GET",
         headers: {
             Authorization: token,
@@ -29,7 +29,7 @@ export const addItemsToDatabase = async (
         itemArray.push(items);
     }
 
-    const addRequest = await fetch(`/api/user/todos`, {
+    const addRequest = await fetch(`http://localhost:8080/api/user/todos`, {
         method: "POST",
         headers: {
             Authorization: token,
@@ -44,14 +44,17 @@ export const addItemsToDatabase = async (
 };
 
 export const deleteItemFromDatabase = async (item: Item, token: string) => {
-    const deleteRequest = await fetch(`/api/user/todos/${item._id}`, {
-        method: "DELETE",
-        headers: {
-            Authorization: token,
-            "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(item),
-    });
+    const deleteRequest = await fetch(
+        `http://localhost:8080/api/user/todos/${item._id}`,
+        {
+            method: "DELETE",
+            headers: {
+                Authorization: token,
+                "Content-Type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify(item),
+        }
+    );
 
     const response = await deleteRequest;
 
@@ -65,14 +68,17 @@ export const deleteItemFromDatabase = async (item: Item, token: string) => {
  * @return {Item} The updated item from the database
  */
 export const updateItemInDatabase = async (item: Item, token: string) => {
-    const updateRequest = await fetch(`/api/user/todos/${item._id}`, {
-        method: "PUT",
-        headers: {
-            Authorization: token,
-            "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(item),
-    });
+    const updateRequest = await fetch(
+        `http://localhost:8080/api/user/todos/${item._id}`,
+        {
+            method: "PUT",
+            headers: {
+                Authorization: token,
+                "Content-Type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify(item),
+        }
+    );
 
     const updatedItem: Item = await updateRequest.json();
 

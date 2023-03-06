@@ -52,15 +52,6 @@ const NavProfile = (props: Props) => {
             >
                 <NavDropdown.Item
                     as={Link}
-                    to="/profile"
-                    eventKey="/profile"
-                    className="text-center"
-                >
-                    Profile
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item
-                    as={Link}
                     to="/logout"
                     eventKey="/logout"
                     className="text-center"

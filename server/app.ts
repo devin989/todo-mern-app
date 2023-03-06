@@ -30,7 +30,8 @@ passportStrategy(passport);
 
 // mongoose setup
 // TODO: Connect this to some cloud provider
-const mongoUrl: string = "mongodb://localhost:27017";
+const mongoUrl: string =
+    "mongodb+srv://admin:adminpassword123@cluster0.c2zcasn.mongodb.net/?retryWrites=true&w=majority";
 mongoose
     .connect(mongoUrl, {
         useNewUrlParser: true,
