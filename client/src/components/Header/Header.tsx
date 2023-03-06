@@ -20,7 +20,6 @@ const Header = (props: Props) => {
         </Navbar.Brand>
         <Navbar.Collapse id="responsive-navbar-nav">
           <NavLinks />
-
           <NavProfile />
         </Navbar.Collapse>
       </Navbar>
