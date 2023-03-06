@@ -1,0 +1,10 @@
+.grid {
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    grid-template-columns: 1fr 8fr 2fr;
+    grid-template-rows: minmax(10vh, min-content) auto 5vh;
+}

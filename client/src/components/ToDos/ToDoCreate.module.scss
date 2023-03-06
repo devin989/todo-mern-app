@@ -1,0 +1,11 @@
+.createInput {
+    text-align: center;
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+}
+
+.actionButtons {
+    width: 2.5rem;
+}

@@ -1,0 +1,31 @@
+.inputText {
+    text-align: center;
+    resize: none;
+
+    &.complete {
+        font-style: italic;
+        text-decoration: line-through;
+    }
+}
+
+.actionButtons {
+    width: 2.5rem;
+}
+
+svg {
+    &.unsavedItemIcon {
+        color: #ff0;
+    }
+
+    &.editIcon {
+        color: lightblue;
+    }
+
+    &.deleteIcon {
+        color: darkred;
+    }
+
+    &.saveEditsIcon {
+        color: lightgreen;
+    }
+}
