@@ -1,8 +1,8 @@
 {
-    "name": "mern-auth-todo-app",
+    "name": "mern-todo-app",
     "version": "0.0.1",
-    "description": "A MERN stack todo app with authentication",
-    "author": "Cellv2",
+    "description": "A MERN stack todo app",
+    "author": "dvn",
     "license": "ISC",
     "main": "index.js",
     "type": "module",
