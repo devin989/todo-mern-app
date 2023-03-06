@@ -1,32 +1,22 @@
-# See it live!
+# TODO Application
 
-Coming soon &trade;
 
-## Goals
+## Technologies
 
-There are four main goals I have with this project:
+ - React JS
+ - Node JS 
+ - Express
+ - Mongo DB
 
-1) Learn about client-server authentication
 
-2) Become more familiar with MongoDB
+## Installing steps
 
-3) Implement theme switching
+    - npm run install-client
+    - npm run install-server
+    - npm start
 
-4) Continue to practise React and TypeScript
+## Sample UIs
 
-## Installing
-
-Please remember to run npm install in both subfolders - they are projects in their own right.
-
-## .env
-
-Please add a .env file at the root of the project. This must include the following variables:
-| Var name      | Type   | Used for?      | Example                         |
-|---------------|--------|----------------|---------------------------------|
-| SECRET_OR_KEY | String | The JWT secret | SECRET_OR_KEY="GitToThaChoppuh" |
-
-## Other bits
-
-### Client
-
-The client project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Login page        |  Landing page
+:-------------------------:|:-------------------------:
+![](https://user-images.githubusercontent.com/54368055/223046250-484b98ce-7f88-4e7e-bb53-85210c4fee34.png)  |  ![](https://user-images.githubusercontent.com/54368055/223046327-298b861b-b71e-4cc2-b252-b57746869d64.png)
